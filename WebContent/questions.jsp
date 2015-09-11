@@ -18,9 +18,9 @@
 	<form action="DisplayQuestions.do" method="post">
 		<p>
 			
-			${question.value}
+			${question.text}
 			<c:forEach var="a" items="${question.answers}">
-				<br/><input type="radio" name="answers" value="${a.value}"/>${a.value}<br/>
+				<br/><input type="radio" name="answers" value="${a.text}"/>${a.text}<br/>
 			</c:forEach>
 		</p>
 		<input type = "submit"/> 

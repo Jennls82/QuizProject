@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.naming.InitialContext;
+import javax.persistence.Persistence;
 import javax.sql.DataSource;
 
 
@@ -23,18 +24,13 @@ public class QuizDB implements Quiz {
 	
 
 		try	
-		{
+		{	
+			
 			
 				InitialContext ctxt = new InitialContext ();
 				DataSource ds =
 						(DataSource) ctxt.lookup("java:comp/env/jdbc/quiz");
 				Connection conn = ds.getConnection();
-			
-			
-			
-//			Class driverClass = Class.forName("org.apache.derby.jdbc.ClientDriver");
-//		    DriverManager.registerDriver((Driver) driverClass.newInstance());
-//			Connection conn = DriverManager.getConnection(URL); 
 
 			loadQuestions(conn);
 		} catch (Exception e) {
@@ -49,6 +45,10 @@ public class QuizDB implements Quiz {
 	}
 	
 	private void loadQuestions(Connection conn) throws SQLException {
+		
+//		emf=Persistence.createEntityManagerFactory("Quiz");
+//		em = emf.createEntityManager();
+//		QuizFacade qf= new QuizFacade(em);//////////////////////////////////////////////////////////////
 
 		String questionSQL = "SELECT qu.id, text "
 				+ "FROM quiz q, question qu, quiz_question qq "

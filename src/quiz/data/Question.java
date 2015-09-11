@@ -2,6 +2,7 @@ package quiz.data;
 
 import java.util.List;
 
+
 public class Question {
 	private int id;
 	private String value;

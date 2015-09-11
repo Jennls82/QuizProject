@@ -1,7 +1,19 @@
 Your primary goal is to migrate the current Java SE Swing based application to a Java 
 Web Application.
 
-Your secondary goal is to make the application accessible to REST clients as well.
+Y
+
+
+
+
+
+
+
+
+
+
+
+our secondary goal is to make the application accessible to REST clients as well.
 
 The current program is created with two options for the data model.  One solution uses 
 a database, the other simply uses data loaded into an in-memory collection. To start 

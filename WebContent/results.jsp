@@ -20,9 +20,9 @@
 		<tr><th>Question</th><th>Answer</th><th>Response</th></tr>
 			<c:forEach var="r" items="${results}">
 				<tr>
-				<td>${r[0].value}</td>
-				<td>${r[1].value}</td>
-				<td>${r[0].givenAnswer}</td>
+				<td>${r[0]}</td>
+				<td>${r[1]}</td>
+				<td>${r[2]}</td>
 				</tr>
 				<br/>	
 			</c:forEach>
