@@ -57,9 +57,14 @@ public class QuizController {
 		System.out.println(name);
 		return new ModelAndView("quizname", "name", name);
 	}
+	
+	@RequestMapping("/ResetQuiz.do")
+	public ModelAndView reset(@ModelAttribute("count") int count) {
+		return new ModelAndView("redirect:index.html", "count", 0);
+	}
 
 	@RequestMapping("/DisplayNumber.do")
-	public ModelAndView getNumberOfQuestions(@ModelAttribute Quiz quiz) {
+	public ModelAndView getNumberOfQuestions(@ModelAttribute("quiz") Quiz quiz) {
 		int num = quiz.getNumberOfQuestions();
 		return new ModelAndView("quiznumberquestions", "number", num);//.getNumberOfQuestions());
 
@@ -68,7 +73,7 @@ public class QuizController {
 	@RequestMapping("/DisplayQuestions.do")
 	public ModelAndView getQuestions(@ModelAttribute("count") int count, 
 			/*@ModelAttribute("userResponse") ArrayList<String> userResponse,*/ 
-			@ModelAttribute Quiz quiz,
+			@ModelAttribute("quiz") Quiz quiz,
 			String answers) {
 		
 		//System.out.println(answers);
@@ -103,15 +108,6 @@ public class QuizController {
 		//mv.addObject("userResponse", userResponse);
 		return mv;
 	}
-		
-
-
-	@RequestMapping("/DisplayResults.do")
-	public ModelAndView getResults(@ModelAttribute quiz.data.Quiz results) {
-		//Object results = em.find(Quiz.class, 1).getResults();
-		System.out.println(results.getResults());
-		return new ModelAndView("results", "results", results.getResults());
-		//return new ModelAndView("results", "results", results);
-	}
+	
 
 }
