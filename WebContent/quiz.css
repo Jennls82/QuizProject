@@ -1,0 +1,105 @@
+
+body{
+	background-color: black ;
+	font-family: 'Bangers', cursive;
+	font-size: 20px;
+}
+
+
+h1{
+	color: white;
+	text-align: center;
+	border: 2px solid orange;
+	border-radius: 10px;
+}
+
+.jsTable{
+	top: 100px;
+	postion: relative;
+	padding: 15px;
+	}
+	
+.jsTableRowHead{
+	text-align: left;
+	font-size: 35px;
+}	
+
+.jsTable,
+#logContent,
+#inContent,
+#resultContent,
+#questionAjax
+ 	{ 	
+	position: fixed;
+    /* center the element */
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    /* give it dimensions */
+    min-height: 10em;
+    width: 90%;
+	display:block;
+	 border-radius: 10px;
+	 padding: 30px;
+	 color: white;	
+	 background-image: linear-gradient(orange, black); 
+	 background-repeat: no-repeat;
+	 
+}
+
+div .button{
+ 	position: fixed; 
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto; 
+    border-radius:5px;
+	width:100px; 
+	height:100x;
+	color: #900;
+  	background: #FF0;
+  	font-weight: bold;
+  	border: 1px solid white;
+}
+ 
+  .indexButton{
+		position: absolute;
+		top:500px;
+}  
+
+#HF{
+	position: relative;
+	left: 525px;
+	top: 100px:
+}
+
+#CQ{
+	position: absolute;
+	margin-top: 500px:
+}
+
+ 
+div .button:hover {
+  color: #FFF;
+  background: orange;
+}
+
+label .player{
+	margin-left: 50px;
+}
+
+label .password{
+	margin-left: 22px;
+}
+label .username{
+	margin-left: 22px;
+}
+
+div #table{
+	margin-top: -75px;
+}
+
+p{
+	text-align: center;
+}

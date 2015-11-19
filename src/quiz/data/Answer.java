@@ -1,8 +1,17 @@
 package quiz.data;
 
 public class Answer {
+	private int answerId;
 	private String value;
 	private boolean correct;
+
+	public int getAnswerId() {
+		return answerId;
+	}
+
+	public void setAnswerId(int answerId) {
+		this.answerId = answerId;
+	}
 
 	public Answer(String value, boolean correct) {
 		this.value = value;

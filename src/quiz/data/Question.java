@@ -15,7 +15,7 @@ public class Question {
 		this.answers = answers;
 	}
 
-	int getId() {
+	public int getId() {
 		return id;
 	}
 

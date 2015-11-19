@@ -1,6 +1,5 @@
 package quiz.entities;
 
-import java.util.Collection;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -9,29 +8,58 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
+@Table(name = "question", schema="app")
 public class Question {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String text;
 	@ManyToMany(mappedBy = "questions")
+	@JsonIgnore
 	private List<Quiz> quizes;
 	@OneToMany(mappedBy = "question")
 	private List<Answer> answers;
 	
 	@Transient // Later we will add Submission entities
-	private String givenAnswer;
+	private Answer givenAnswer;
 	
 
-	public String getGivenAnswer() {
+	public Answer getGivenAnswer() {
 		return givenAnswer;
+	}
+	
+	public Answer getAnswer(int aid) {
+		Answer a = null;
+		for (Answer an : answers) {
+			if (an.getId() == aid) {
+				return an;
+			}
+		}
+		return a;
+	}
+
+	public Answer getAnswer(String text) {
+		Answer a = null;
+		for (Answer an : answers) {
+			if (an.getText().equals(text)) {
+				return an;
+			}
+		}
+		return a;
 	}
 
 	public void setGivenAnswer(String givenAnswer) {
-		this.givenAnswer = givenAnswer;
+		this.givenAnswer = getAnswer(givenAnswer);
+	}
+
+	public void setGivenAnswer(int answerId) {
+		this.givenAnswer = getAnswer(answerId);//////double check
 	}
 
 	public String getText() {
@@ -53,7 +81,7 @@ public class Question {
 	public void setQuizes(List<Quiz> quizes) {
 		this.quizes = quizes;
 	}
-
+	
 	public List<Answer> getAnswers() {
 		return answers;
 	}

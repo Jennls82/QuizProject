@@ -8,7 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>profile jsp</h1>
-      Welcome 
+	<h2>Profile</h2>
+	
+	show quizzes and scores?
+	take another quiz
+
+	
+
 </body>
 </html>

@@ -6,27 +6,28 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="quiz.css">
+<link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
 <title>Insert title here</title>
 </head>
 <body>
 <body>
 
-	<h1 align="center">QUIZTIME</h1>
+	<h1>QUIZTIME</h1>
 
 	<p>Choose your answer:</p>
-
+<div>
 	<form action="DisplayQuestions.do" method="post">
 		<p>
 			
 			${question.text}
-			<c:forEach var="a" items="${question.answers}">
+			<c:forEach var="a" items="${question.answers}"><br/>
 				<br/><input type="radio" name="answers" value="${a.text}"/>${a.text}<br/>
 			</c:forEach>
 		</p>
-		<input type = "submit"/> 
-	
+		<input class="button" type = "submit"/> 
 	</form>
-
-${count}
+</div>
+<%-- ${count} debugger to track ? count --%>
 </body>
 </html>

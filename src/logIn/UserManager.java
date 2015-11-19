@@ -4,17 +4,23 @@ public class UserManager implements UserDAO {
 
     @Override
     public User getUser(User u) {
-        User onlyUser = new User("player", "password");          
+        User user = new User("usename", "password");          
         
-        if(u.getPlayer().equals(onlyUser.getPlayer()) && u.getPassword().equals(onlyUser.getPassword())) {
-            return onlyUser;
+        if(u.getUsername().equals(user.getUsername()) && u.getPassword().equals(user.getPassword())) {
+            return user;
         }
         return null;
     }
 
     @Override
-    public boolean userExists(String player) {
+    public boolean usernameExists(String player) {
         return false;
     }
+
+	@Override
+	public boolean userPasswordCorrect(String password) {
+
+		return false;
+	}
     
 }

@@ -30,7 +30,7 @@
     <mvc:annotation-driven />
      
     <!-- congiguration for JPA -->
-   <tx:annotation-driven transaction-manager="transactionManager"/> 
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <bean id="EMF"
         class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

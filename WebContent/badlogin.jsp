@@ -7,6 +7,6 @@
 <title>badlogin.jsp</title>
 </head>
 <body>
-    Bad Login -- no email address submitted
+    Bad Login -- try again
 </body>
 </html>

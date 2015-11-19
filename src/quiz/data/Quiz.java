@@ -8,4 +8,5 @@ public interface Quiz {
 	public int getNumberOfQuestions();
 	public List<Question> getQuestions();
 	public String getResults();
+	public boolean checkAnswer(int questionId, int answerId);
 }

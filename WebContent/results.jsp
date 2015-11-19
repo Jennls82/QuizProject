@@ -7,6 +7,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="quiz.css">
+<link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
 <title>Insert title here</title>
 </head>
 <body>
@@ -14,8 +16,8 @@
 	<h1>Your Results</h1>
 
 
-
-	<form action="DisplayQuestions.do" method="post">
+<div>
+	<form id="table" action="DisplayQuestions.do" method="post">
 		<table border="1" class="left">
 		<tr><th>Question</th><th>Answer</th><th>Response</th></tr>
 			<c:forEach var="r" items="${results}">
@@ -30,7 +32,8 @@
 	</form>
 
 	<form action="quiz.do" method="post">
-		<input type="submit" value="play again" />
+		<input class="button" type="submit" value="play again" />
 	</form>
+</div>	
 </body>
 </html>

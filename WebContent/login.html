@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="quiz.css">
+	<link rel="stylesheet" type="text/css" href="quiz.css">
+	<link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+<title>Login Page</title>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+
+/* $(document).ready(********************wrong way to do this dummy
+		function() {
+			$.ajax(
+					{
+						url : "/SDQuizProject/login/" // url path mapping for request
+								+ username, //requested data
+								//+ password, //requested data
+						method : "get", // request method type
+						datatype : "json",//call expects back a json object
+						success : function(logIn) {//if call is sucessful run a fuction to
+							var username = getRequestParam("username");
+							var password = getRequestParam("password");
+						},
+					}).fail(function(data) {//if the call fails log the event
+						console.log("failure of ajax/json during call");
+					});
+		
+
+		function logIn(usename,paswword){
+			if (username !== username || password !== password){
+			alert("incorrect login, try again");
+		}
+	})(); */
+</script>  
+
+</head>
+
+
+
+<body>
+
+	<h1>Log in to Play</h1>
+	
+	<div id="logContent">
+		<form action="login.do" method="post">
+	 <label>User Name: <input class="username" type="text" name="username"
+			id="txtUserName">
+		</label> 
+		<br/>
+		 <label>Password: <input class="password" type="password" name="password"
+			id="txtpassword">
+		</label >
+		 <input class="button" type="submit" value="Login">
+		</form>
+	</div>
+</body>
+</html>

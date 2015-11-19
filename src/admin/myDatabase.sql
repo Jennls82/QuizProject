@@ -78,7 +78,7 @@ CREATE TABLE submission_answer
 );
 
 INSERT INTO account (username, password, email, registration_date)
-            VALUES ('joe', 'joe', 'joe@example.com', '2015-01-07');
+            VALUES ('jenn', 'jenn', 'jenn@example.com', '2015-01-07');
 INSERT INTO account (username, password, email, registration_date)
             VALUES ('jim', 'jim', 'jim@example.com', '2015-01-08');
 INSERT INTO account (username, password, email, registration_date)

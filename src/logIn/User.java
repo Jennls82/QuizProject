@@ -2,25 +2,31 @@ package logIn;
 
 public class User {
     //    Fields
-    private String player;
+    private String username;
     private String password;
     
-    //    Constructor
-    public User() {
-        setPlayer("");
-        setPassword("");
-    }
     
-    public User(String email, String password) {
-        super();
-        setPlayer(email);
-        setPassword(password);
-    }
+	public User(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+			
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
     
-    //    Accessor Methods
-    public String getPlayer()        { return player;        }
-    public String getPassword()        { return password;    }
-    
-    public void setPlayer(String e)        { player = e;    }
-    public void setPassword(String p)    { password = p;    }
 }
+    
+    
+    
+    
